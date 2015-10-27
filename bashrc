@@ -97,9 +97,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Added by autojump install.sh
-# source /etc/profile.d/autojump.bash
-
 #maximize the brigthness if keyboard controls aren't working
 function brightnessmaximize(){
  sudo setpci -s 00:02.0 F4.B=ff
@@ -125,8 +122,8 @@ export TERM="xterm-256color"
 export RUBYOPT=rubygems
 
 # autojump
-[[ `uname` == "Linux" && -f /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
-[[ `uname` == "Darwin" && -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && source $(brew --prefix)/etc/profile.d/autojump.sh
+[[ `uname` == "Linux" && -f /usr/share/autojump/autojump.bash ]] && source /usr/share/autojump/autojump.bash
+[[ `uname` == "Darwin" && -s $(brew --prefix)/etc/profile.d/autojump.bash ]] && source $(brew --prefix)/etc/profile.d/autojump.bash
 
 # alias
 alias l="ls -lh"
