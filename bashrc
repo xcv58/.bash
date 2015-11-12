@@ -161,7 +161,6 @@ command -v adb >/dev/null 2>&1 && {
     alias auninstall="adb uninstall"
     alias apull="adb pull"
     alias areboot="adb reboot"
-    alias aflashall="fastboot flashall -w"
     alias aflash="fastboot flashall"
 }
 
@@ -313,8 +312,8 @@ alias gSu='git submodule foreach git pull origin master'
 alias gSx='git-submodule-remove'
 
 # Working Copy (w)
-alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
-alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules}'
+alias gws='git status --short'
+alias gwS='git status'
 alias gwd='git diff --no-ext-diff'
 alias gwD='git diff --no-ext-diff --word-diff'
 alias gwr='git reset --soft'
